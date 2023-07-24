@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "9f273f23-4f8d-4fbc-8e05-8ace81537c3e",
+		"name": "FCM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14774585"
+	},
+	"item": [
+		{
+			"name": "https://fcm.googleapis.com/fcm/send",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "key=YOUR_FCM_SERVER_KEY",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"to\": \"user_fcm_token\",\n    \"data\": {\n        \"iOrderId\": \"2677\",\n        \"iOfferId\": \"23\",\n        \"iCategoryId\": \"3\",\n        \"biProductId\": \"21\",\n        \"vCategoryName\": \"Soft Drinks\",\n        \"body\": \"Place your order now.\",\n        \"icon\": \"https://dev2.spaceo.in/project/top_materials_web/code/public/theme/dist/img/applogo.png\",\n        \"type\":\"6\",\n        \"badge\":\"47\",\n        \"sound\":\"defalut\",\n        \"title\":\"Cart Reminder\",\n        \"iUserId\":\"120\"\n    }\n}"
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
